@@ -19,7 +19,6 @@ $('.grid').imagesLoaded().always(function () {
 function ata() {
 
   var currTime = new Date().getTime()
-  console.log(currTime - timestamp)
   if (currTime - timestamp < 2000 && isLoading) {
     return false;
   };
