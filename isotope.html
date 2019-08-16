@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>isotope 示例</title>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+  <style>
+    /** 横向 */
+    /* .grid-item { width: 25%; display: inline-block; background: pink; margin: 4px; }
+    .grid-item--width2 { width: 50%; }
+    .grid-item--width3 { width: 30%; } */
+
+    .grid-item { width: 20%; float: left; background: pink; margin: 4px; }
+    .grid-sizer { width: 25%; }
+  </style>
+
+</head>
+<body>
+
+    <!-- <div class="grid">
+      <div class="grid-item">...</div>
+      <div class="grid-item grid-item--width2">...</div>
+      <div class="grid-item">...</div>
+      <div class="grid-item grid-item--width3">...</div>
+      <div class="grid-item">...</div>
+      <div class="grid-item">...</div>
+    </div> -->
+
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <div class="grid-item" style="height: 60px;">...</div>
+      <div class="grid-item" style="height: 40px;">...</div>
+      <div class="grid-item" style="height: 60px;">...</div>
+      <div class="grid-item" style="height: 120px;">...</div>
+      <div class="grid-item" style="height: 40px;">...</div>
+      <div class="grid-item" style="height: 100px;">...</div>
+    </div>
+  
+    <script>
+    
+    $('.grid').isotope({
+      // options
+      itemSelector: '.grid-item',
+      masonry: {
+				columnWidth: '.grid-sizer',
+			}
+    });  
+
+    </script>
+</body>
+</html>
